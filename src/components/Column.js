@@ -40,6 +40,22 @@ class Column extends Component {
         return (
             <div>
                 <h2>{this.props.status}</h2>
+
+                <div>
+                    {
+                    this.state.tasks.length ?
+                    this.state.tasks.map((task, i)=>{
+                        console.log(task)
+                        return <div key={i}>
+                            {task.title}<br/>
+                            {task.assignee}<br/>
+                            {task.description}<br/>
+                            {task.dateDue}<br/>
+                            </div>
+                    }) : ""
+                    }
+                </div>
+
             </div>
         )
     }
