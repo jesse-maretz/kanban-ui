@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Task(props) {
-    
-    const dragStart = e => {
+class Task extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    dragStart = (e) => {
         const target = e.target;
         e.dataTransfer.setData('card_id', target.id)
         setTimeout(() => {
@@ -10,21 +13,21 @@ function Task(props) {
         }, 0)
     }
 
-    const dragOver = e => {
+    dragOver = (e) => {
         e.stopPropagation();
     }
 
-    return (
-        <div
-            id={props.id}
-            className={props.className}
-            draggable={props.draggable}
-            onDragStart={dragStart}
-            onDragOver={dragOver}
-        >
-            {props.children}
-        </div>
-    )
+    render() {
+        return (
+            <div
+                draggable="true"
+                onDragStart={this.dragStart}
+                onDragOver={this.dragOver}
+            >
+                <p>Task 1</p>
+            </div>
+        )
+    }
 }
 
 export default Task

@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Column(props) {
-    const drop = e => {
+class Column extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            tasks: []
+        }
+    }
+    
+    componentDidMount = () => {
+        let url = ""
+        fetch(url)
+            .then(res => res.json())
+            .then(tasks=>{
+                console.log(tasks)
+                this.setState({tasks: tasks})
+            })
+    }
+
+
+
+    drop = (e) => {
         e.preventDefault();
         const card_id = e.dataTransfer.getData('card_id')
 
@@ -11,22 +30,19 @@ function Column(props) {
         e.target.appendChild(card);
     }
 
-    const dragOver = e => {
+    dragOver = (e) => {
         e.preventDefault();
     }
 
 
 
-    return (
-        <div
-            id={props.id}
-            onDrop={drop}
-            onDragOver={dragOver}
-            className={props.className}
-        >
-            { props.children }
-        </div>
-    )
+    render() {
+        return (
+            <div>
+                <h2>{this.props.status}</h2>
+            </div>
+        )
+    }
 }
 
 export default Column
