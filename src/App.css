@@ -5,11 +5,17 @@
 }
 
 body {
-    background-color: #f3f3f3;
+    background-color: rgb(235, 211, 178);
 }
 
 .title {
     text-align: center;
+}
+
+.newTaskForm {
+    text-align: center;
+    padding: 10px;
+    
 }
 
 .flexbox {
@@ -18,22 +24,17 @@ body {
     width: 100%;
     max-width: 768px;
     height: 100vh;
-
     overflow: hidden;
-
     margin: 0 auto;
-    padding: 15px;
+    padding: 2px;
 }
 
 .flexbox .column {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     max-width: 300px;
-
-    background-color: #f4f4f4;
-
+    background-color: rgb(235, 211, 178);
     padding: 15px;
     margin: 15px;
 }

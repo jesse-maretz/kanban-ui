@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 const axios = require("axios");
-import DatePicker from "react-datepicker";
 
 
 class NewTask extends Component {
@@ -24,7 +23,9 @@ class NewTask extends Component {
     render() {
         return(
             <div>
-                <form onSubmit={this.onSubmit}>
+                <form 
+                    onSubmit={this.onSubmit}
+                    className="newTaskForm">
 
                     <div>
                         <h3>New Task</h3>
@@ -48,9 +49,6 @@ class NewTask extends Component {
                     <div>
                         <label>Date Due: </label>
                         <input type="text" required/>
-                        <DatePicker
-                            selected={startDate}
-                            onChange={date => setStartDate(date)} />
                     </div>
 
                     <div>

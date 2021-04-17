@@ -26,7 +26,7 @@ class Task extends Component {
                 className={this.props.className}
                 id={this.props.id}
             >
-                <p>Task 1</p>
+                <p>Task </p>
                 {this.props.children}
             </div>
         )
