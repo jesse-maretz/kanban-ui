@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Column from './components/Column';
 import Task from './components/Task';
 import NewTask from './components/NewTask';
+import './App.css'
 
 class App extends Component {
   constructor() {

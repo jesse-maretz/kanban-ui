@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 const axios = require("axios");
+import DatePicker from "react-datepicker";
 
 
 class NewTask extends Component {
@@ -11,12 +12,14 @@ class NewTask extends Component {
         console.log(e)
         e.preventDefault()
         axios
-            .post("")
+            .post("mongodb://localhost:9000/tasks")
             .then(() => {
                 console.log('form submitted')
-                window.location.rreload()
+                window.location.reload()
             })
     }
+
+    
 
     render() {
         return(
@@ -34,12 +37,20 @@ class NewTask extends Component {
 
                     <div>
                         <label>Title: </label>
-                        <input type="text"/>
+                        <input type="text" required />
                     </div>
 
                     <div>
                         <label>Description: </label>
                         <input type="text"/>
+                    </div>
+
+                    <div>
+                        <label>Date Due: </label>
+                        <input type="text" required/>
+                        <DatePicker
+                            selected={startDate}
+                            onChange={date => setStartDate(date)} />
                     </div>
 
                     <div>

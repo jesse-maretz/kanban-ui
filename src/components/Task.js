@@ -6,7 +6,7 @@ class Task extends Component {
     }
 
     dragStart = (e) => {
-        const target = e.target;
+        let target = e.target;
         e.dataTransfer.setData('card_id', target.id)
         setTimeout(() => {
             target.style.display = "none";
@@ -23,8 +23,11 @@ class Task extends Component {
                 draggable="true"
                 onDragStart={this.dragStart}
                 onDragOver={this.dragOver}
+                className={this.props.className}
+                id={this.props.id}
             >
                 <p>Task 1</p>
+                {this.props.children}
             </div>
         )
     }
