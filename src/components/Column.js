@@ -9,7 +9,7 @@ class Column extends Component {
     }
     
     componentDidMount = () => {
-        let url = "mongodb://localhost:9000/tasks"
+        let url = ""
         fetch(url)
             .then(res => res.json())
             .then(tasks=>{
@@ -23,10 +23,8 @@ class Column extends Component {
     drop = (e) => {
         e.preventDefault();
         let card_id = e.dataTransfer.getData('card_id')
-
         let card = document.getElementById(card_id);
         card.style.display = 'block';
-
         e.target.appendChild(card);
     }
 
