@@ -9,6 +9,7 @@ For the structure of this project I decided to use class components to create co
 ## Usage
 
 Fork and clone this repository and open with a code editor.
+Run npm install
 
 ## Demo
 
