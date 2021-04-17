@@ -25,7 +25,6 @@ class App extends Component {
           <Column 
             id="column-1"
             className="column"
-            url=""
             status="To Do">
             <Task
               id="task-1"
@@ -37,7 +36,6 @@ class App extends Component {
           <Column
             id="column-2" 
             className="column"
-            url=""
             status="In Progress">
             <Task
               id="task-2"
@@ -49,7 +47,6 @@ class App extends Component {
           <Column
             id="column-3"
             className="column"
-            url=""
             status="Completed">
             <Task
               id="task-3"

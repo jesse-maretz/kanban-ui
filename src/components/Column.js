@@ -9,7 +9,7 @@ class Column extends Component {
     }
     
     componentDidMount = () => {
-        let url = ""
+        let url = "mongodb://localhost:9000/tasks"
         fetch(url)
             .then(res => res.json())
             .then(tasks=>{
