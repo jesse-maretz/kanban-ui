@@ -10,7 +10,3 @@ For the structure of this project I decided to use class components to create co
 
 Fork and clone this repository and open with a code editor.
 Run npm install
-
-## Demo
-
-https://drive.google.com/file/d/1sxx8peX2kjms5Kdae83uYP5QIvX55F2d/view?usp=sharing
